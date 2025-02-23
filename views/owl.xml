@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+ 
+
+  
+
+
+
+    <record id="student_list_from_owl_view_actiop" model="ir.actions.client">
+      <field name="name">All Students From Owl</field>
+      <!-- <field name="type">ir.actions.act_window</field>
+      <field name="res_model">edu.student</field> -->
+      <!-- <field name="view_mode">tree</field> -->
+      <field name="tag">edu_ms.StudentList</field>
+       
+      
+    </record>
+
+</odoo>

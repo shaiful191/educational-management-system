@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<templates>
+  <t t-name="owl.student_list_owl_view" owl="1">
+    <div class="container-fluid">
+      <h1>Student Info</h1>
+      <div class="row custom_table_style">
+        <div class="col-md-5">
+          <table style="table-layout: fixed;">
+            <thead>
+              <tr>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Mobile</th>
+              </tr>
+            </thead>
+            <tbody>
+              <t t-if="state.StudentInfo">
+                <t t-foreach="state.StudentInfo" t-as="data" t-key="data.key">
+                  <tr>
+                    <td>
+                      <t t-esc="data.name"/>
+                    </td>
+                    <td>
+                      <t t-esc="data.email"/>
+                    </td>
+                    <td>
+                      <t t-esc="data.mobile"/>
+                    </td>
+                  </tr>
+                </t>
+              </t>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </t>
+</templates>
+<!-- <?xml version="1.0" encoding="UTF_8"?>
+
+<odoo>
+<templete id="student_list">
+
+       <t t-name="student_list_owl_view" owl="1">
+  
+  <h1>Students</h1>
+  <t t-if="error">
+    <p class="error">{{error}}</p>
+  </t>
+  <t t-else>
+     <ul>
+        <t t-for="student in state.students">
+            <li>{{student.name}}</li>
+        </t>
+     </ul>
+   </t>
+   </t>
+</templete>
+</odoo>
+
+ -->

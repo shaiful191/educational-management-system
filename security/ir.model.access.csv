@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+edu_ms.access_edu_student,access_edu_student,edu_ms.model_edu_student,,1,1,1,0
+edu_ms.access_create_student_wizard,access_create_student_wizard,edu_ms.model_create_student_wizard,,1,1,1,
+
+

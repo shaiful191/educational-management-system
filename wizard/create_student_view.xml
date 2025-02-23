@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+   <!-- odoo form -->
+   <record id="create_student_form_view" model="ir.ui.view">
+      <field name="name">create.student.wizard.form</field>
+      <field name="model">create.student.wizard</field>
+      <field name="arch" type="xml">
+        <form string="Create New Student">
+           <!-- <sheet> -->
+              <group>
+                  <field name="name"/>
+                  <field name="age"/>
+                 
+              </group>
+              <footer>
+                    <button name="create_student_view_action" type="object" string="Create" class="btn-primary" />
+                    <button string="Cancel" class="btn-secondary" special="cancel"/>
+              </footer>
+           <!-- </sheet> -->
+         </form>
+       </field>
+    </record>
+
+
+   
+  
+
+   <!-- odoo act_window -->
+   <record id="create_student_view_action" model="ir.actions.act_window">
+      <field name="name">Create Students</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">create.student.wizard</field>
+      <field name="view_mode">form</field>
+      <field name="view_id" ref="create_student_form_view" />
+      <field name="target">new</field>
+   </record>
+
+</odoo>

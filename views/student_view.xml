@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+
+   <!-- odoo form -->
+   <record id="student_form_view" model="ir.ui.view">
+      <field name="name">Students</field>
+      <field name="model">edu.student</field>
+      <field name="arch" type="xml">
+        <form string="Students Profile">
+           <sheet>
+              <group>
+                  <field name="name"/>
+                  <field name="email"/>
+                  <field name="mobile_number"/>
+              </group>
+           </sheet>
+         </form>
+       </field>
+    </record>
+
+
+   
+   <!-- odoo treeview -->
+   <record id="student_list_view" model="ir.ui.view">
+      <field name="name">All Students</field>
+      <field name="model">edu.student</field>
+      <field name="arch" type="xml">
+         <tree string="All Students">
+            <field name="name"/>
+            <field name="email"/>
+            <field name="mobile_number"/>
+         </tree>
+      </field>
+   </record>
+
+   <!-- odoo act_window -->
+   <record id="student_view_action" model="ir.actions.act_window">
+      <field name="name">All Students</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">edu.student</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+          <p class="oe_view_nocontent_create">
+              Please enter your student information here!
+          </p>
+      </field>  
+   </record>
+
+</odoo>

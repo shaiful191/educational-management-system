@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+  <menuitem id="edums_root" name="EduMs" sequence="0"/>
+  <menuitem id="edums_students_menu" name="Students" parent="edums_root" sequence="0"/>
+  <menuitem id="edums_all_students_menu" name="All Students" parent="edums_students_menu" action="edu_ms.student_view_action" sequence="0"/>
+  <menuitem id="create_students_menu" name="Create Students" parent="edums_students_menu" action="create_student_view_action" sequence="1"/>
+  <menuitem id="student_list_from_owl_menu"
+  name="Student List From Owl" 
+  parent="edums_students_menu" 
+  action="student_list_from_owl_view_actiop"
+  sequence="2"/>
+</odoo>
